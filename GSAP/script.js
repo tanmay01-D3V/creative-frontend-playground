@@ -88,4 +88,35 @@ imageDiv.addEventListener("mouseleave", function () {
         scale: 1,
         backgroundColor: "#ffffffff",
     });
-}); 
+});
+
+var menu = document.querySelector("#nav i");
+var cross = document.querySelector("#menu i");
+
+var tl = gsap.timeline()
+
+tl.to("#menu", {
+    right: 0,
+    duration: 0.5
+})
+
+tl.from("#menu h4", {
+    x: 150,
+    duration: 0.5,
+    stagger: 0.3,
+    opacity: 0,
+})
+
+tl.from("#menu i", {
+    opacity: 0
+})
+
+tl.pause()
+
+menu.addEventListener("click", function () {
+    tl.play()
+})
+
+cross.addEventListener("click", function () {
+    tl.reverse()
+})
