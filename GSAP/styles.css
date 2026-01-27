@@ -114,18 +114,25 @@ svg {
     color: aliceblue;
 }
 
-#nav h1 {
+#nav h2 {
     font-size: 35px;
     font-weight: 400;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
     font-style: normal;
+    overflow: hidden;
+}
+
+h2 span{
+    display: inline-block;
 }
 
 #nav i {
     font-size: 35px;
     font-weight: bolder;
     cursor: pointer;
+    align-items: center;
+    justify-self: center;
 }
 
 #menu {
@@ -135,7 +142,6 @@ svg {
     background-color: rgba(255, 255, 255, 0.36);
     top: 0;
     right: -25%;
-    backdrop-filter: blur(12px);
     padding: 150px 60px;
 }
 
