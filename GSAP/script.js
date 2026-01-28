@@ -121,20 +121,20 @@ cross.addEventListener("click", function () {
     tl.reverse()
 })
 
-function breakTheText(){
+function breakTheText() {
     var h2 = document.querySelector("h2")
     var h2Text = h2.textContent
-    
+
     var splittedText = h2Text.split("")
-    var halfValue = splittedText.length/2
+    var halfValue = splittedText.length / 2
 
     var clutter = ""
 
-    splittedText.forEach(function (elem, idx){
-        if (idx<halfValue){
+    splittedText.forEach(function (elem, idx) {
+        if (idx < halfValue) {
             clutter += `<span class="a">${elem}</span>`
-        }else{
-           clutter += `<span class="b">${elem}</span>`
+        } else {
+            clutter += `<span class="b">${elem}</span>`
         }
     })
 
@@ -143,18 +143,46 @@ function breakTheText(){
 
 breakTheText()
 
-gsap.from("#nav h2 .a",{
-    y:80,
+gsap.from("#nav h2 .a", {
+    y: 80,
     duration: 1,
-    delay:0.5,
+    delay: 0.5,
     stagger: 0.2,
-    opacity:0,
+    opacity: 0,
 })
 
-gsap.from("#nav h2 .b",{
-    y:80,
+gsap.from("#nav h2 .b", {
+    y: 80,
     duration: 1,
-    delay:0.5,
+    delay: 0.5,
     stagger: -0.2,
-    opacity:0,
+    opacity: 0,
 })
+
+function marqueAnimation() {
+    window.addEventListener("wheel", function (dets) {
+        if(dets.deltaY > 0) {
+            gsap.to(".marque", {
+                    transform: "translateX(-200%)", 
+                repeat: -1, 
+                duration: 4, 
+                ease: "none",
+            })
+            gsap.to(".marque img",{
+                rotate: 180
+            })
+        } else {
+            gsap.to(".marque", {
+                transform: "translatex(0%)",
+                repeat: -1,     
+                duration: 4, 
+                ease: "none",
+            })
+            gsap.to(".marque img",{
+                rotate: 0
+            })
+        }
+    })
+}
+
+marqueAnimation()
