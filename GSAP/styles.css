@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=UnifrakturMaguntia&display=swap');
+
 @font-face {
     font-family: china;
     src: url(./Assets/NeueMachina-Ultrabold.otf);
@@ -11,8 +13,17 @@
 
 .bungee-regular {
 
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.agu-display {
+    font-family: "Agu Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 0;
 }
 
 html,
@@ -46,7 +57,7 @@ body {
 #Page2 {
     width: 100%;
     height: 100%;
-    background-color: #00d0ff;
+    background: linear-gradient(180deg, #ff0000 0%, #880808 50%, #4a0404 100%);
 }
 
 #Page3 {
@@ -59,9 +70,12 @@ body {
 }
 
 #Page2 h1 {
-    font-size: 40vw;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 37vw;
+    font-family: "New Rocker", system-ui;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 #string {
@@ -120,7 +134,7 @@ svg {
 }
 
 #nav h2 {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 400;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
@@ -128,7 +142,7 @@ svg {
     overflow: hidden;
 }
 
-h2 span{
+h2 span {
     display: inline-block;
 }
 
@@ -170,19 +184,22 @@ h2 span{
     font-size: 30px;
     cursor: pointer;
 }
-#Page4{
+
+#Page4 {
     width: 100%;
     height: 100%;
     padding: 5vw 0;
     background-color: black;
 }
-#move{
+
+#move {
     background-color: #D8FF04;
     overflow-x: hidden;
     display: flex;
     padding: 3vw 0;
 }
-.marque{
+
+.marque {
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -190,15 +207,17 @@ h2 span{
     padding: 0 1.5vw;
     transform: translateX(-100%);
 }
-.marque h1{
-    font-size: 4vw;
+
+.marque h1 {
+    font-size: 4.5vw;
     font-family: china;
 }
-.marque img{
-    height: 8vw;
+
+.marque img {
+    height: 10vw;
 }
 
-#Page5{
+#Page5 {
     width: 100%;
     height: 100%;
     padding: 5vw 0;

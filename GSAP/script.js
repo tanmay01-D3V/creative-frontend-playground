@@ -1,12 +1,12 @@
 gsap.to("#Page2 h1", {
-    transform: "translateX(-200%)",
+    transform: "translateX(-70%)",
     scrollTrigger: {
         trigger: "#Page2",
         scroller: "body",
         markers: true,
         start: "top 0%",
-        end: "top -200%",
-        scrub: 1,
+        end: "top -150%",
+        scrub: 2,
         pin: true,
     }
 });
@@ -161,24 +161,24 @@ gsap.from("#nav h2 .b", {
 
 function marqueAnimation() {
     window.addEventListener("wheel", function (dets) {
-        if(dets.deltaY > 0) {
+        if (dets.deltaY > 0) {
             gsap.to(".marque", {
-                    transform: "translateX(-200%)", 
-                repeat: -1, 
-                duration: 4, 
+                transform: "translateX(-200%)",
+                repeat: -1,
+                duration: 4,
                 ease: "none",
             })
-            gsap.to(".marque img",{
-                rotate: 180
+            gsap.to(".marque img", {
+                rotate: -180
             })
         } else {
             gsap.to(".marque", {
                 transform: "translatex(0%)",
-                repeat: -1,     
-                duration: 4, 
+                repeat: -1,
+                duration: 4,
                 ease: "none",
             })
-            gsap.to(".marque img",{
+            gsap.to(".marque img", {
                 rotate: 0
             })
         }
